@@ -1,0 +1,70 @@
+@import './reset';
+@import './variables';
+
+// ************************************************ Index Html PAGE ************************************************
+// Header
+header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    .example {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 0;
+        nav {
+            ul {
+                display: flex;
+                li{
+                    margin-left: 2rem;
+                    a{
+                        font-size: 1.5rem;
+                        color: black;
+                        &:hover{
+                            border-bottom: 1px solid black;
+                        }
+                    }
+                    .cart-link{
+                        display: flex;
+                        p{
+                            margin-left: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Handmade Section
+.handmade{
+    background: url('https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/minattnvs/Rectangle-YZ9P6kWjMnUBNL6W.png') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    h1{
+        font-size: 5rem;
+        font-weight: 700;
+        letter-spacing: 0.5rem;
+        text-align: center;
+    }
+    p{
+        font-size: 1.5rem;
+        margin: 2rem 0;
+    }
+    a{
+        background-color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        color: #000;
+        &:hover{
+            background-color: rgba($color: #fff, $alpha: 0.9);
+        }
+    }
+}
+// Bestseller section
+
