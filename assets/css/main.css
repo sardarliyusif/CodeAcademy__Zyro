@@ -17,8 +17,7 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -41,7 +40,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -65,6 +64,9 @@ a {
     width: 95%;
   }
 }
+.d-none {
+  display: none !important;
+}
 
 header {
   position: -webkit-sticky;
@@ -72,90 +74,368 @@ header {
   top: 0;
   background-color: #fff;
 }
-
 header .example {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1.5rem 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
 }
-
+header .example .logo i {
+  font-size: 1.5rem;
+  color: black;
+  margin-right: 3rem;
+}
 header .example nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  align-items: center;
 }
-
 header .example nav ul li {
   margin-left: 2rem;
 }
-
 header .example nav ul li a {
   font-size: 1.5rem;
   color: black;
 }
-
 header .example nav ul li a:hover {
   border-bottom: 1px solid black;
 }
-
 header .example nav ul li .cart-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 header .example nav ul li .cart-link p {
   margin-left: 0.5rem;
 }
+header .example nav ul .about-li {
+  transition: 0.5s;
+}
+header .example nav ul .about-li:hover i {
+  transform: rotate(180deg);
+}
 
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+  .logo i {
+    display: inline !important;
+  }
+  .nav ul li {
+    display: none;
+  }
+  .nav ul .cart-li {
+    display: block;
+  }
+}
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 12px;
+  }
+  .logo i {
+    display: inline !important;
+  }
+  .nav ul li {
+    display: none;
+  }
+  .nav ul .cart-li {
+    display: block;
+  }
+}
 .handmade {
   background: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/minattnvs/Rectangle-YZ9P6kWjMnUBNL6W.png") no-repeat center;
   background-size: cover;
   width: 100%;
   min-height: 90vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: #fff;
 }
-
 .handmade h1 {
   font-size: 5rem;
   font-weight: 700;
   letter-spacing: 0.5rem;
   text-align: center;
 }
-
 .handmade p {
   font-size: 1.5rem;
   margin: 2rem 0;
 }
-
 .handmade a {
   background-color: #fff;
   padding: 1rem 2rem;
   border-radius: 10px;
   color: #000;
 }
-
 .handmade a:hover {
   background-color: rgba(255, 255, 255, 0.9);
 }
-/*# sourceMappingURL=main.css.map */
+
+.bestseller {
+  padding: 5rem 0;
+}
+.bestseller .example {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bestseller .example .bestseller__head h3 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 5rem;
+  color: #4d2c57;
+}
+.bestseller .example .items {
+  display: flex;
+  gap: 1rem;
+}
+.bestseller .example .items .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  font-size: 1.25rem;
+  color: #4d2c57;
+}
+.bestseller .example .items .item p {
+  margin: 1rem 0;
+}
+.bestseller .example .bestseller__icon {
+  margin-top: 5rem;
+}
+.bestseller .example .bestseller__icon a {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  color: #000;
+  border: 1px solid #4d2c57;
+  transition: 0.5s;
+}
+.bestseller .example .bestseller__icon a:hover {
+  background-color: rgba(77, 44, 87, 0.9);
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .items {
+    flex-direction: column;
+  }
+}
+.homedekor {
+  background: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/minattnvs/Untitled-AzGRJwMK6BHxZypJ.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.homedekor h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  text-align: center;
+}
+.homedekor p {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+.homedekor a {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  color: #000;
+}
+.homedekor a:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.about {
+  padding: 5rem 0;
+}
+.about .example {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about .example .items {
+  display: flex;
+  gap: 1rem;
+  gap: 1rem;
+}
+.about .example .items .item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-self: center;
+  font-size: 1.25rem;
+  color: #4d2c57;
+}
+.about .example .items .item p {
+  margin: 1rem 0;
+}
+.about .example .items .item__img img {
+  max-width: 500px;
+  width: 100%;
+  max-height: 500px;
+  height: auto;
+}
+.about .example .items .item .bestseller__icon {
+  margin: 2rem 0;
+}
+.about .example .items .item .bestseller__icon a {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  color: #000;
+  border: 1px solid #4d2c57;
+  transition: 0.5s;
+}
+.about .example .items .item .bestseller__icon a:hover {
+  background-color: rgba(77, 44, 87, 0.9);
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .items {
+    flex-direction: column;
+  }
+}
+.newletter {
+  background: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/minattnvs/Frame-AGBpDkZaG5cRpbaw.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 2rem 0;
+}
+.newletter h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  text-align: center;
+}
+.newletter input {
+  margin: 2rem 0;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: azure;
+}
+.newletter a {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  color: #000;
+}
+.newletter a:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.followus {
+  padding: 5rem 0;
+}
+.followus .example {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.followus .example .bestseller__head h3 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 5rem;
+  color: #4d2c57;
+}
+.followus .example .items {
+  display: flex;
+  gap: 1rem;
+}
+.followus .example .items .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  font-size: 1.25rem;
+  color: #4d2c57;
+}
+.followus .example .items .item p {
+  margin: 1rem 0;
+}
+.followus .example .items .item__img img {
+  max-width: 300px;
+  width: 100%;
+  max-height: 300px;
+  height: auto;
+}
+.followus .example .bestseller__icon {
+  margin-top: 5rem;
+}
+.followus .example .bestseller__icon a {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  border-radius: 10px;
+  color: #4d2c57;
+}
+
+@media screen and (max-width: 768px) {
+  .items {
+    flex-direction: column;
+  }
+}
+footer {
+  background-color: #ddd;
+}
+footer .footer-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem;
+}
+footer .footer-content .footer-up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+footer .footer-content .footer-up .factory .factory__name {
+  font-size: 1.5rem;
+}
+footer .footer-content .footer-up .up__links a {
+  font-size: 1.25rem;
+  margin-right: 1rem;
+  color: #000;
+}
+footer .footer-content .footer-down a {
+  color: #000;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  footer .footer-content {
+    padding: 0;
+  }
+  footer .footer-content .footer-up {
+    flex-direction: column;
+  }
+  footer .footer-content .footer-up .factory {
+    margin-bottom: 1.5rem;
+  }
+  footer .footer-content .footer-up .up__links {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer-content .footer-up .up__links a {
+    text-decoration: underline;
+    margin-bottom: 2rem;
+  }
+}/*# sourceMappingURL=main.css.map */
