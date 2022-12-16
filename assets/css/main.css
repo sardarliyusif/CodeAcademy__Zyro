@@ -17,7 +17,8 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -40,7 +41,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
@@ -64,6 +65,7 @@ a {
     width: 95%;
   }
 }
+
 .d-none {
   display: none !important;
 }
@@ -74,44 +76,96 @@ header {
   top: 0;
   background-color: #fff;
 }
+
 header .example {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 2rem 0;
 }
+
 header .example .logo i {
   font-size: 1.5rem;
   color: black;
   margin-right: 3rem;
 }
+
 header .example nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 header .example nav ul li {
   margin-left: 2rem;
 }
+
 header .example nav ul li a {
   font-size: 1.5rem;
   color: black;
 }
+
 header .example nav ul li a:hover {
   border-bottom: 1px solid black;
 }
+
 header .example nav ul li .cart-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 header .example nav ul li .cart-link p {
   margin-left: 0.5rem;
 }
+
 header .example nav ul .about-li {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+
 header .example nav ul .about-li:hover i {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+header .example .hamburger-nav {
+  position: absolute;
+  padding: 2rem;
+  background-color: #fff;
+  width: 100vw;
+  top: 60px;
+  left: 0;
+}
+
+header .example .hamburger-nav ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+header .example .hamburger-nav ul li {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -128,6 +182,7 @@ header .example nav ul .about-li:hover i {
     display: block;
   }
 }
+
 @media screen and (max-width: 425px) {
   html {
     font-size: 12px;
@@ -142,33 +197,47 @@ header .example nav ul .about-li:hover i {
     display: block;
   }
 }
+
 .handmade {
   background: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/minattnvs/Rectangle-YZ9P6kWjMnUBNL6W.png") no-repeat center;
   background-size: cover;
   width: 100%;
   min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #fff;
 }
+
 .handmade h1 {
   font-size: 5rem;
   font-weight: 700;
   letter-spacing: 0.5rem;
   text-align: center;
 }
+
 .handmade p {
   font-size: 1.5rem;
   margin: 2rem 0;
 }
+
 .handmade a {
   background-color: #fff;
   padding: 1rem 2rem;
   border-radius: 10px;
   color: #000;
 }
+
 .handmade a:hover {
   background-color: rgba(255, 255, 255, 0.9);
 }
@@ -176,44 +245,71 @@ header .example nav ul .about-li:hover i {
 .bestseller {
   padding: 5rem 0;
 }
+
 .bestseller .example {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .bestseller .example .bestseller__head h3 {
   font-weight: 700;
   font-size: 3rem;
   margin-bottom: 5rem;
   color: #4d2c57;
 }
+
 .bestseller .example .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 1rem;
 }
+
 .bestseller .example .items .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   justify-self: center;
   font-size: 1.25rem;
   color: #4d2c57;
 }
+
 .bestseller .example .items .item p {
   margin: 1rem 0;
 }
+
 .bestseller .example .bestseller__icon {
   margin-top: 5rem;
 }
+
 .bestseller .example .bestseller__icon a {
   background-color: #fff;
   padding: 1rem 2rem;
   border-radius: 10px;
   color: #000;
   border: 1px solid #4d2c57;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+
 .bestseller .example .bestseller__icon a:hover {
   background-color: rgba(77, 44, 87, 0.9);
   color: #fff;
@@ -221,36 +317,53 @@ header .example nav ul .about-li:hover i {
 
 @media screen and (max-width: 768px) {
   .items {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
+
 .homedekor {
   background: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/minattnvs/Untitled-AzGRJwMK6BHxZypJ.png") no-repeat center;
   background-size: cover;
   width: 100%;
   min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #fff;
 }
+
 .homedekor h1 {
   font-size: 5rem;
   font-weight: 700;
   letter-spacing: 0.5rem;
   text-align: center;
 }
+
 .homedekor p {
   font-size: 1.5rem;
   margin: 2rem 0;
 }
+
 .homedekor a {
   background-color: #fff;
   padding: 1rem 2rem;
   border-radius: 10px;
   color: #000;
 }
+
 .homedekor a:hover {
   background-color: rgba(255, 255, 255, 0.9);
 }
@@ -258,45 +371,72 @@ header .example nav ul .about-li:hover i {
 .about {
   padding: 5rem 0;
 }
+
 .about .example {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .about .example .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 1rem;
   gap: 1rem;
 }
+
 .about .example .items .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   justify-self: center;
   font-size: 1.25rem;
   color: #4d2c57;
 }
+
 .about .example .items .item p {
   margin: 1rem 0;
 }
+
 .about .example .items .item__img img {
   max-width: 500px;
   width: 100%;
   max-height: 500px;
   height: auto;
 }
+
 .about .example .items .item .bestseller__icon {
   margin: 2rem 0;
 }
+
 .about .example .items .item .bestseller__icon a {
   background-color: #fff;
   padding: 1rem 2rem;
   border-radius: 10px;
   color: #000;
   border: 1px solid #4d2c57;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+
 .about .example .items .item .bestseller__icon a:hover {
   background-color: rgba(77, 44, 87, 0.9);
   color: #fff;
@@ -304,39 +444,56 @@ header .example nav ul .about-li:hover i {
 
 @media screen and (max-width: 768px) {
   .items {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
+
 .newletter {
   background: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/minattnvs/Frame-AGBpDkZaG5cRpbaw.png") no-repeat center;
   background-size: cover;
   width: 100%;
   min-height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #fff;
   padding: 2rem 0;
 }
+
 .newletter h1 {
   font-size: 5rem;
   font-weight: 700;
   letter-spacing: 0.5rem;
   text-align: center;
 }
+
 .newletter input {
   margin: 2rem 0;
   padding: 0.5rem 1rem;
   border: none;
   background-color: azure;
 }
+
 .newletter a {
   background-color: #fff;
   padding: 1rem 2rem;
   border-radius: 10px;
   color: #000;
 }
+
 .newletter a:hover {
   background-color: rgba(255, 255, 255, 0.9);
 }
@@ -344,42 +501,68 @@ header .example nav ul .about-li:hover i {
 .followus {
   padding: 5rem 0;
 }
+
 .followus .example {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .followus .example .bestseller__head h3 {
   font-weight: 700;
   font-size: 3rem;
   margin-bottom: 5rem;
   color: #4d2c57;
 }
+
 .followus .example .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 1rem;
 }
+
 .followus .example .items .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   justify-self: center;
   font-size: 1.25rem;
   color: #4d2c57;
 }
+
 .followus .example .items .item p {
   margin: 1rem 0;
 }
+
 .followus .example .items .item__img img {
   max-width: 300px;
   width: 100%;
   max-height: 300px;
   height: auto;
 }
+
 .followus .example .bestseller__icon {
   margin-top: 5rem;
 }
+
 .followus .example .bestseller__icon a {
   font-size: 1.5rem;
   text-decoration: underline;
@@ -389,31 +572,46 @@ header .example nav ul .about-li:hover i {
 
 @media screen and (max-width: 768px) {
   .items {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
+
 footer {
   background-color: #ddd;
 }
+
 footer .footer-content {
   max-width: 1200px;
   margin: auto;
   padding: 3rem;
 }
+
 footer .footer-content .footer-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 2rem 0;
 }
+
 footer .footer-content .footer-up .factory .factory__name {
   font-size: 1.5rem;
 }
+
 footer .footer-content .footer-up .up__links a {
   font-size: 1.25rem;
   margin-right: 1rem;
   color: #000;
 }
+
 footer .footer-content .footer-down a {
   color: #000;
   margin-right: 1rem;
@@ -424,18 +622,62 @@ footer .footer-content .footer-down a {
     padding: 0;
   }
   footer .footer-content .footer-up {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   footer .footer-content .footer-up .factory {
     margin-bottom: 1.5rem;
   }
   footer .footer-content .footer-up .up__links {
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   footer .footer-content .footer-up .up__links a {
     text-decoration: underline;
     margin-bottom: 2rem;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+.site-head-img {
+  min-height: 40vh;
+  width: 100%;
+  background: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/minattnvs/dd-d95eByKQX2CoQJ4L.png") no-repeat center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.site-head-img h3 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.shop {
+  background-image: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/minattnvs/dd-d95eByKQX2CoQJ4L.png");
+}
+
+.about {
+  background-image: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=945,fit=crop/minattnvs/Frame-YanWlX24wOIg2vwL.png");
+}
+
+.contact {
+  background-image: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/minattnvs/kk-AVLnvEyZ8ehlnGNB.png");
+}
+/*# sourceMappingURL=main.css.map */

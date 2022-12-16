@@ -52,6 +52,22 @@ header {
         }
       }
     }
+    .hamburger-nav{
+      position: absolute;
+      padding: 2rem;
+      background-color: #fff;
+      width: 100vw;
+      top: 60px;
+      left: 0;
+      ul{
+        flex-direction: column;
+        align-items: flex-end;
+        li{
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
 }
 
@@ -439,3 +455,36 @@ footer {
     }
   }
 }
+
+// same content for page
+.site-head-img{
+  min-height: 40vh;
+  width: 100%;
+  background: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/minattnvs/dd-d95eByKQX2CoQJ4L.png")
+    no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h3{
+      font-size: 4rem;
+      font-weight: 700;
+      color: #fff;
+    }
+}
+// Shop section start
+.shop{
+  background-image: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/minattnvs/dd-d95eByKQX2CoQJ4L.png");
+}
+// Shop section end
+// about section start
+.about{
+  background-image: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=945,fit=crop/minattnvs/Frame-YanWlX24wOIg2vwL.png");
+}
+// about section end
+// contact section start
+.contact{
+  background-image: url("https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/minattnvs/kk-AVLnvEyZ8ehlnGNB.png");
+
+}
+// contact section end
